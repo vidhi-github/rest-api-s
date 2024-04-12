@@ -1,8 +1,21 @@
+.heading{
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
 h1{
     color:brown;
 }
 .post{
     background-color: blanchedalmond;
+    width: 500px;
+    height:150px;
+    margin-left: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .user{
     font-style:italic;

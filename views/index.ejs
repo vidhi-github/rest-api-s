@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
-    <h1>Quora posts</h1>
+    <div class="heading">
+        <h1>Post Here</h1>
+        <a href="http://localhost:8080/posts/new"><b>Create new post</b></a>
+    </div>
+    
     <% for(post of posts){ %>
     <div class="post">
-        <h3 class="user">@<%= post.username %></h3>
+        <h3 class="user">@&nbsp;&nbsp;<%= post.username %></h3>
         <h4 class="content"> <%= post.content %></h4>
-        <br/>
-        <a href="http://localhost:8080/posts/<%= post.id %>">see in detail</a>
-        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a><br/>
+        <a href="http://localhost:8080/posts/<%= post.id %>">See in detail</a>&nbsp;&nbsp;
+        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a><br/><br/>
         <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
             <button>Delete post</button><br/>
         </form>
     </div>
+    <hr/>
     <% } %>
-
-    <a href="http://localhost:8080/posts/new">create new post</a>
+    <br/>
+    
 </body>
 </html>
